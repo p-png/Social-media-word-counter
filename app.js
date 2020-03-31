@@ -48,18 +48,26 @@ for(let i = 0;i<media.length;i++){
             limit=280
             words.innerHTML=limit
             count.innerHTML=0
+            text.value=""
+            message.innerHTML=""
         }else if(media[1].checked){
             limit = 63206
             words.innerHTML=limit
             count.innerHTML=0
+            text.value=""
+            message.innerHTML=""
         }else if(media[2].checked){
             limit = 2200
             words.innerHTML=limit
             count.innerHTML=0
+            text.value=""
+            message.innerHTML=""
         }else if(media[3].checked){
             limit = 8000
             words.innerHTML=limit
             count.innerHTML=0
+            text.value=""
+            message.innerHTML=""
         }else{message.innerHTML=''}
     })
 }

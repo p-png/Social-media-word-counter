@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SocialMedia Word Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <h1>SocialMedia Word Counter</h1>
+
+     <div class="centered">
+         <div id="message">
+
+         </div>
+        <div>
+            <p>Select your SocialMeida</p><br>
+            <form action="" method="post" name="forms">
+                
+                <label>Twitter</label>
+                <input type="radio" name="media" id="twitter" value="twitter"><br>
+                <label>FaceBook</label>
+                <input type="radio" name="media"  id="facebook" value="facebook"><br>
+                <label>Instagram</label>
+                <input type="radio" name="media" id="instergram" value="instergram"><br>
+                <label>Others</label>
+                <input type="radio" name="media" class="spacer" id="others" value="others"><br>
+                <textarea name="twitter"  id="text" cols="50" rows="10"></textarea>
+            </form>
+        </div>
+       <div class="spacer">
+        <span >Word Count:<span id="count"></span></span>
+        <span class="span1" >Words:<span id="words"></span> </span>
+       </div>
+     </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

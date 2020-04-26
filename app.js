@@ -51,25 +51,21 @@ for(let i = 0;i<media.length;i++){
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            text.setAttribute('maxLength',280)
         }else if(media[1].checked){
             limit = 63206
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            text.setAttribute('maxLength',63206)
         }else if(media[2].checked){
             limit = 2200
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            text.setAttribute('maxLength',2200)
         }else if(media[3].checked){
             limit = 8000
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            text.setAttribute('maxLength',8000)
         }else{message.innerHTML=''}
     })
 }
@@ -87,6 +83,7 @@ text.addEventListener('click',()=>{
         
         // Disable textarea and output a congratulatery message when the maximum word count is reached
         if(text.value.length === limit){
+            text.setAttribute('maxLength',limit)
             message.style.color = 'green'
             message.innerHTML='Congratulation!!! you have reached  maximum word count'
         

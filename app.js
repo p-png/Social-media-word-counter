@@ -23,6 +23,8 @@
  * 2. Use Es6 syntax wherever possible.  
  */
 
+
+ 
 //  Hold span tags to output count and word count respectively in variabels
 let count=document.querySelector('#count');
 let words = document.querySelector('#words');
@@ -49,25 +51,25 @@ for(let i = 0;i<media.length;i++){
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            message.innerHTML=""
+            text.setAttribute('maxLength',280)
         }else if(media[1].checked){
             limit = 63206
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            message.innerHTML=""
+            text.setAttribute('maxLength',63206)
         }else if(media[2].checked){
             limit = 2200
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            message.innerHTML=""
+            text.setAttribute('maxLength',2200)
         }else if(media[3].checked){
             limit = 8000
             words.innerHTML=limit
             count.innerHTML=0
             text.value=""
-            message.innerHTML=""
+            text.setAttribute('maxLength',8000)
         }else{message.innerHTML=''}
     })
 }
@@ -85,22 +87,11 @@ text.addEventListener('click',()=>{
         
         // Disable textarea and output a congratulatery message when the maximum word count is reached
         if(text.value.length === limit){
-            text.setAttribute('disabled',true)
             message.style.color = 'green'
             message.innerHTML='Congratulation!!! you have reached  maximum word count'
         
         }
-
-        //clear out and disable textarea, and output an erro message if user exceeds maximum word count 
-        else if(text.value.length > limit){
-            message.style.color = 'red'
-        message.innerHTML=`"Oops!! can't exceed maximum word count "<a href='index.html' style = 'text-decoration:none'>Try again</a>`
-        text.value=''
-            text.setAttribute('disabled',true)
-         text.style.border='1px solid red'
-        words.innerHTML=''
-        count.innerHTML=''
-        }
+        else {message.innerHTML=''}
     },1);
 })
 

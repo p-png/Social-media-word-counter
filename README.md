@@ -6,7 +6,12 @@ The SMWC App helps people type the accurate number of words accepted by various 
 
 This is an application that helps you keep track of the exact amount of characters typed into a social media input feild 
 built HTML, CSS and JavaScript
- 
+
+```javaScript
+import SocialMedia word counter
+select your social media option #
+returns a message that the number of characters allowed for the selected option has been reached
+``` 
 
 ### Contributing
 Pull requests are welcome. please open an issue first to discuss what you would like to change
